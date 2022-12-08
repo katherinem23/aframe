@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="Practice A-frame Model">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://aframe.io/releases/1.3.0/aframe.min.js"> </script>
+    </head>
+    <body>
+        <a-scene>
+            <a-entity scale="2 2 2">
+                <!-- right pillar -->
+                <a-box metalness = ".2" position="25 12 0" height="30" width="10" color="grey" rotation="0 -90 0"></a-box>
+                <!-- left pillar -->
+                <a-box metalness = ".2" position="-25 12 0" height="30" width="10" color="grey" rotation="0 -90 0"></a-box>
+                <!-- upper pillar-->
+                <a-box metalness = ".2" position="0 26.5 0" height="10" width="51" color="grey" rotation="-90 0 0" material="" geometry=""></a-box>
+                <!-- lower pillar -->
+                <a-box metalness = ".2" position="0 -2.5 0" height="10" width="51" color="grey" rotation="-90 0 0" material="" geometry=""></a-box>
+            </a-entity>           
+            
+
+            <a-sky color="#658fae"></a-sky>
+
+            <a-entity scale="2 2 2" animation="pauseEvents: click; resumeEvents: mouseenter; property: rotation; to: 0 360 0; dur: 5000; easing: linear; loop: true">
+                <!-- right orange structure-->
+                <a-box metalness = ".4" position="15 10 0" rotation="0 0 0" height="2" width="1" scale="6 9 6" material="color: #ff5900"></a-box>
+                <!-- left orange structure-->
+                <a-box metalness = ".4" position="-15 10 0" rotation="" height="2" width="1" scale="6 9 6" material="color: #ff5900" geometry=""></a-box>
+                <!-- center orange structure-->
+                <a-box metalness = ".4" position="0.37235 13.00451 -0.09307" rotation="" height="2" width="1" scale="5 6 6" material="color: #ff5900" geometry=""></a-box>
+                <!-- upper orange structure-->
+                <a-box metalness = ".4" position="-0.02812 19.53739 -0.00992" height="6" width="36" material="color: #ff5900" rotation="-90 0 0" material="" geometry=""></a-box>
+            </a-entity>
+            <a-entity scale="2 2 2" animation="pauseEvents: click; resumeEvents: mouseenter; property: rotation; to: 360 0 0; dur: 5000; easing: linear; loop: true">
+                 <!-- upper pink structure -->
+                 <a-box position="0 20.5 0" height="6" width="36" material="color: #ce6f6f" rotation="-90 0 0" geometry=""></a-box>
+                 <!-- bottom pink structure -->
+                 <a-box position="0 4 0" rotation="-90 -90 0" height="3.45" width="1" scale="6 7 6" material="color: #ce6f6f" geometry=""></a-box>
+                 <!-- right pink structure-->
+                 <a-box position="10.5 12 0" rotation="" height="2" width="0.5" scale="6 7 6" material="color: #ce6f6f" geometry=""></a-box>
+                 <a-box position="3.5 12 0" rotation="" height="2" width="0.3" scale="6 7 6" material="color: #ce6f6f" geometry=""></a-box>
+                 <a-box position="7 18.5 0" height="6" width="6" material="color: #ce6f6f" rotation="-90 0 0" geometry=""></a-box>
+                 <!-- left pink structure-->
+                 <a-box position="-8 18.5 0" height="6" width="6" material="color: #ce6f6f" rotation="-90 0 0" geometry=""></a-box>
+                 <a-box position="-4.5 12 0" rotation="" height="2" width="0.8" scale="6 7 6" material="color: #ce6f6f" geometry=""></a-box>
+                 <a-box position="-11 12 0" rotation="" height="2" width="0.3" scale="6 7 6" material="color: #ce6f6f" geometry=""></a-box>
+            </a-entity>
+            <a-entity scale="2 2 2">
+                <!-- blue panes -->
+                <a-plane position="-18.5 9 -5" height="22" width="12.2" rotaton="0 0 0" material="color: #9ca5e8; transparent: true; blending: multiply" geometry=""> </a-plane>
+                <a-plane position="19 8.5 -5" height="22" width="12.2" rotaton="0 0 0" material="color: #9ca5e8; transparent: true; blending: multiply" geometry=""> </a-plane>            
+            </a-entity>
+                <!-- camera -->
+                <a-entity camera="" position="0 10 110" wasd-controls="" rotation="" look-controls="" aframe-injected="" data-aframe-inspector-original-camera=""></a-entity>
+                <!-- cursor -->
+                <a-camera position="0 10 110"><a-entity cursor="rayOrigin:mouse"></a-entity></a-camera>
+        </a-scene>
+    </body>
+</html>
